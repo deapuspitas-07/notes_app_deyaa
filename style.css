@@ -1,0 +1,394 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6f3ff,
+            #eef0ff,
+            #fdf7ff
+        );
+
+    min-height: 100vh;
+
+    color: #2d3436;
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 92%;
+    max-width: 700px;
+
+    margin: 0 auto;
+    padding: 30px 0 50px;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #6c5ce7;
+
+    color: white;
+
+    border-radius: 18px;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 8px 20px rgba(108, 92, 231, 0.25);
+}
+
+header h1 {
+    margin: 0;
+
+    font-size: 30px;
+
+    color: #6c5ce7;
+}
+
+header p {
+    margin: 5px 0 0;
+
+    color: #636e72;
+
+    font-size: 14px;
+}
+
+
+/* FORM */
+
+.form {
+    background: rgba(255, 255, 255, 0.95);
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid #eee;
+}
+
+.form h2 {
+    margin-top: 0;
+
+    font-size: 20px;
+
+    color: #6c5ce7;
+}
+
+
+/* INPUT */
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 14px;
+
+    border: 2px solid #eee;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #6c5ce7;
+
+    box-shadow:
+        0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* BUTTON */
+
+.button-group {
+    display: flex;
+
+    gap: 10px;
+}
+
+button {
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 13px 18px;
+
+    background: #6c5ce7;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    background: #5748c9;
+}
+
+#btnSimpan {
+    flex: 1;
+}
+
+.batal {
+    background: #b2bec3;
+}
+
+.batal:hover {
+    background: #636e72;
+}
+
+
+/* SEARCH */
+
+.search-box {
+    margin-top: 25px;
+}
+
+.search-box input {
+    background: white;
+
+    margin-bottom: 0;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+/* INFO */
+
+.info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 28px;
+}
+
+.info h2 {
+    margin: 0;
+
+    font-size: 20px;
+}
+
+#jumlahCatatan {
+    background: #6c5ce7;
+
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* CATATAN */
+
+.catatan {
+    background: white;
+
+    margin-top: 15px;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.07);
+
+    border-left: 5px solid #6c5ce7;
+
+    animation: muncul 0.3s ease;
+
+    transition: 0.3s;
+}
+
+.catatan:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(108, 92, 231, 0.12);
+}
+
+.catatan h3 {
+    margin: 0 0 8px;
+
+    color: #2d3436;
+
+    font-size: 19px;
+}
+
+.catatan p {
+    color: #636e72;
+
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+
+    margin: 0 0 12px;
+}
+
+.tanggal {
+    font-size: 12px;
+
+    color: #a0a5aa;
+
+    margin-bottom: 15px;
+}
+
+
+/* BUTTON CATATAN */
+
+.aksi {
+    display: flex;
+
+    gap: 8px;
+}
+
+.edit,
+.hapus {
+    flex: 1;
+
+    padding: 10px;
+
+    font-size: 13px;
+}
+
+.edit {
+    background: #00b894;
+}
+
+.edit:hover {
+    background: #009f7f;
+}
+
+.hapus {
+    background: #ff4757;
+}
+
+.hapus:hover {
+    background: #e84141;
+}
+
+
+/* EMPTY */
+
+.empty {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: #999;
+
+    background: white;
+
+    margin-top: 15px;
+
+    border-radius: 16px;
+}
+
+
+/* ANIMATION */
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 94%;
+
+        padding-top: 20px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+
+        font-size: 25px;
+    }
+
+    .form {
+        padding: 18px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .aksi {
+        flex-direction: column;
+    }
+
+}
